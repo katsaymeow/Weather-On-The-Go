@@ -1,3 +1,7 @@
+# Weather App 
+
+This week's challenge is to use server side API's to display the current weather of a given city or data set. 
+
 ## Sources
 
 https://fonts.google.com/specimen/Libre+Baskerville?preview.text=Weather%20On%20The%20Go&preview.text_type=custom
