@@ -7,7 +7,7 @@ function getWeatherApi(requestUrl){
         console.log(response);
         if(response.status === 200){
             responseCards.textContent = response.status;
-        }
+        }// is the response needing parameters? 
         return response.json();
      })
 }
