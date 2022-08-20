@@ -1,33 +1,50 @@
-var requestUrl = 'https://api.openweathermap.org/data/2.5/weather?zip=45103,us&APPID=2484cafe54599b17aa85cab5dfd8b39f';
-var responseCards = document.getElementById('city-cards');
-// var userZipCode = document.getElementsByClassName('submit');
+var requestUrl = 'https://api.openweathermap.org/data/2.5/weather?zip=45103&APPID=2484cafe54599b17aa85cab5dfd8b39f';
+var responseCards = document.getElementsByClassName('.city-cards');
 var userInputSubmitBtn = document.getElementById('submit');
-var submitBtn = document.getElementById('click','#submit-button');
-submitBtn.addEventListener('click', (getWeatherApi()));
 //can i add user input to the url???
-function getWeatherApi(requestUrl){
+
     fetch(requestUrl)
      .then(function(response){
         console.log(response);
- if(response.status === 200){
-    
-}// is the response needing parameters? 
-return response.json();
-})
-}
-console.log(requestUrl)
-getWeatherApi(requestUrl);
+        return response.json();
+     })
+     .then(function (data){
+        console.log(data);
+        for ( var i =0; i < data.list; i++){
+            var day = data.list[i];
+            var temp = day.main.temp;
+            console.log(temp);
+            console.log(day);
+            var displayTemp = document.createElement('tr');
+            var displayDay = document.createElement('td');
 
-var apiParametersCall = 'https://api.openweathermap.org/geo/1.0/direct?q=Cincinnati&limit=3&appid=2484cafe54599b17aa85cab5dfd8b39f';
-
-function apiGeo (apiParametersCall){
-    fetch(apiParametersCall)
-    .then(function(response){
-        console.log(response);
-        if(response.status === 200){
+            displayTemp.textContent = data.list[i].weather[0].description.main;
+            console.log(data.list[i].weather[0].description)
+            responseCards.appendChild.displayTemp;
         }
-        return response.json()
         
-    })
-}
-apiGeo(apiParametersCall);
+     });
+     console.log(responseCards)
+
+     
+// console.log(requestUrl)
+// getWeatherApi(requestUrl);
+
+// var apiParametersCall = 'https://api.openweathermap.org/geo/1.0/direct?zip=45103&appid=2484cafe54599b17aa85cab5dfd8b39f';
+
+// function apiGeo (apiParametersCall){
+//     fetch(apiParametersCall)
+//     .then(function(response){
+//         console.log(response);
+//         for (var i = 0; i < data.length; i++){
+//             var tempature = document.createElement('tr');
+            
+//         }
+//         return response.json()
+        
+//     })
+// }
+// apiGeo(apiParametersCall);
+// var userZipCode = document.getElementsByClassName('submit');
+// var submitBtn = document.getElementById('click','#submit-button');
+// submitBtn.addEventListener('click', (getWeatherApi()));
