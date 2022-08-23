@@ -10,23 +10,31 @@ var requestUrl = 'https://api.openweathermap.org/data/2.5/weather?zip=45103&APPI
      })
      .then(function (data){
         console.log(data);//this logs the data array to pull 
-        for ( var i =0; i < data.list; i++){
-            var day = data.list[i];
-            var temp = day.main.temp;
-            var highs = day.main.temp_max;
-            var lows = day.main.temp_min;
-            var city = day.name;
-            var sunSys = day.sunrise;
-            var moonSys = day.sunset;
-            var windSpeed = day.wind.speed;
-            var windDegree = day.wind.deg;
-        }
+      //   for ( var i =0; i < data; i++){
+      //       var day = data[i];
+            var temp = data.main.temp;
+            console.log(temp);
+            var highs = data.main.temp_max;
+            console.log(highs);
+            var lows = data.main.temp_min;
+            console.log(lows);
+            var city = data.name;
+            console.log(city);
+            var sunSys = data.sys.sunrise;
+            console.log(sunSys);
+            var moonSys = data.sys.sunset;
+            console.log(moonSys);
+            var windSpeed = data.wind.speed;
+            console.log(windSpeed);
+            var windDegree = data.wind.deg;
+            console.log(windDegree);
+            console.log(data);
         
      });
-     console.log(responseCards);
-     console.log(requestUrl);
+     
      var userInput = document.querySelector('#submit');
-     userInput.addEventListener('click');
+   //   userInput.addEventListener('click' );
+console.log(userInput)
 
 
 
