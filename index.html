@@ -31,8 +31,33 @@
         <div class="invalid-feedback"></div>
         <button type="button" id="submit-button" class="btn btn-info">Submit</button>
     </div>
-      <div class="city-cards d-inline col-9"></div>
-      <h1> the cards with the cities go here after population from API</h1>
+    <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="city"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p id="temp"></p>
+              <p id="highs"></p>
+              <p id="lows"></p>
+              <p id="sun-sys"></p>
+              <p id="moon-sys"></p>
+              <p id="wind-speed"></p>
+              <p id="wind-degree"></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
     
     
     <script type="text/javascript" src="develop/js/script.js"></script>
