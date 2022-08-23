@@ -26,10 +26,14 @@ var requestUrl = 'https://api.openweathermap.org/data/2.5/weather?zip=45103&APPI
             console.log(windSpeed);
             var windDegree = data.wind.deg;
             console.log(windDegree);
-     });
+  
      
      var userInput = document.querySelector('#submit');
 console.log(userInput);// this logs to the correct input
+var submitBtn = document.getElementById("submit-button");
+submitBtn.addEventListener('click', displayWeather());
+function displayWeather(){
+
 document.getElementById("city").innerHTML = city;
 document.getElementById("temp").innerHTML = temp;
 document.getElementById("highs").innerHTML = highs;
@@ -39,12 +43,12 @@ document.getElementById("moon-sys").innerHTML = moonSys;
 document.getElementById("wind-speed").innerHTML = windSpeed;
 document.getElementById("wind-degree").innerHTML = windDegree;
 
+}
 
 
 
 
 
 
-
-
+});
      
