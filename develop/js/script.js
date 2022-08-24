@@ -1,6 +1,7 @@
-
-var requestUrl = 'https://api.openweathermap.org/data/2.5/weather?zip=45103&APPID=2484cafe54599b17aa85cab5dfd8b39f';
-
+function getApi(){
+var requestUrl = 'https://api.openweathermap.org/data/2.5/weather?zip=45103&units=imperial&APPID=2484cafe54599b17aa85cab5dfd8b39f';
+var userInput = document.querySelector('#submit');
+console.log(userInput);// I have tried inserting ${'userInput'}to the api call to add the user input
 //can i add user input to the url???
 
     fetch(requestUrl)
@@ -9,7 +10,7 @@ var requestUrl = 'https://api.openweathermap.org/data/2.5/weather?zip=45103&APPI
         return response.json();
      })
      .then(function (data){
-        console.log(data);//this logs the data array to pull 
+        console.log(data);//this logs the data array to pull from
             var temp = data.main.temp;
             console.log(temp);
             var highs = data.main.temp_max;
@@ -27,23 +28,17 @@ var requestUrl = 'https://api.openweathermap.org/data/2.5/weather?zip=45103&APPI
             var windDegree = data.wind.deg;
             console.log(windDegree);
   
-     
-     var userInput = document.querySelector('#submit');
 console.log(userInput);// this logs to the correct input
-var submitBtn = document.getElementById("submit-button");
-submitBtn.addEventListener('click', displayWeather());
-function displayWeather(){
 
-document.getElementById("city").innerHTML = city;
-document.getElementById("temp").innerHTML = temp;
-document.getElementById("highs").innerHTML = highs;
-document.getElementById("lows").innerHTML = lows;
-document.getElementById("sun-sys").innerHTML = sunSys;
-document.getElementById("moon-sys").innerHTML = moonSys;
-document.getElementById("wind-speed").innerHTML = windSpeed;
-document.getElementById("wind-degree").innerHTML = windDegree;
+document.getElementById("city").textContent = city
+document.getElementById("temp").textContent = temp;
+document.getElementById("highs").textContent = highs;
+document.getElementById("lows").textContent = lows;
+document.getElementById("sun-sys").textContent = sunSys;
+document.getElementById("moon-sys").textContent = moonSys;
+document.getElementById("wind-speed").textContent = windSpeed;
+document.getElementById("wind-degree").textContent = windDegree;
 
-}
 
 
 
@@ -51,4 +46,6 @@ document.getElementById("wind-degree").innerHTML = windDegree;
 
 
 });
-     
+}
+var submitBtn = document.getElementById('submit-button');
+submitBtn.addEventListener('click', getApi());   
