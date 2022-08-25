@@ -1,3 +1,57 @@
+* {
+    --background-color: #dddfd6;
+    --text-color: #08065b;
+    --accent-color: #77b767;
+    --box-color: #90e77a;
+}
 body {
     font-family: 'Libre Baskerville', serif;
+    background-color: var(--background-color);
+}
+.jumbotron{
+    color: var(--text-color);
+    background-color: var(--accent-color);
+    height: 15rem;
+    width: 100%;
+}
+.input-group-text {
+    color: var(--text-color);
+    background-color: var(--box-color);
+    border: solid 2px;
+    border-color: var(--text-color);
+}
+.side-bar {
+    color: var(--text-color);
+}
+.list-group.citys {
+    background-color: var(--box-color);
+}
+.btn {
+    color: var(--text-color);
+    border: solid 2px;
+    border-color: var(--text-color);
+    background-color: var(--box-color);
+    box-shadow: var(--text-color);
+}
+.list-group {
+    background-color: var(--box-color);
+}
+.info-card{
+    display: flex;
+    flex-direction: row;
+    color: var(--text-color);
+    background-color: var(--accent-color);
+}
+.data-input-card {
+    padding-left: 3rem;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: var(--text-color);
+    background-color: var(--accent-color);
+    height: 60px;
+    width: 100%;
 }

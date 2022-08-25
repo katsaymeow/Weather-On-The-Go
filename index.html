@@ -10,43 +10,53 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./develop/css/style.css">
    
     <title>Weather Now</title>
 </head>
 
 
 <body>
-    <div class="container m-4 d-inline-row border-info">
-    <div class="jumbotron jumbotron-fluid  bg-info text-black">
-        <div class="container  m-5 d-inline-row">
-            <h1 class="w-100 m-4 d-inline-row">Weather On The GO</h1>
-            <p class="lead m-4 d-inline-row">Please enter your selected city by zip code.</p>
+    <div class="d-inline-row">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container d-inline-row">
+            <h1 class="w-100 d-inline-row text-center">Weather On The GO</h1>
+            <p class="lead text-center d-inline-row">Please enter your selected city by zip code.</p>
         </div>
     
 
-    <div class="input-group m-4 d-inline-row w-50">
+    <div class="input-group container-fluid w-75">
         <div class="input-group-prepend">
-          <span class="input-group-text bg-dark text-white">Enter Zip Code</span>
+          <span class="input-group-text">Enter Zip Code</span>
         </div>
         <input type="text" class="form-control" id="submit">
-        <div class="invalid-feedback"></div>
-        <button type="button" id="submit-button" class="btn btn-dark">Get Your Weather</button>
+        <button type="button" id="submit-button" class="btn">Get Your Weather</button>
     </div>
   </div>
  </div> 
-   
-    <div class="container-fluid row-sm-md-lg card w-75 shadow p-3 mb-5 bg-info text-light rounded">
-      <div class="card-body ">
-        <p class="card-title" id="city"></p>
-        <p id="temp"></p>
-        <p id="highs"></p>
-        <p id="lows"></p>
-        <p id="humidity"></p>
-        <p id="feels-like"></p>
-        <p id="wind-speed"></p>
-        <p id="wind-degree"></p>
+ <div class="container-fluid d-flex row-sm-md-lg card w-75 shadow p-3 mb-5 info-card">  
+ <div class="side-bar w-25 h-100">
+  <div class="list-group citys">
+    <button id="san-juan" class="san-juan btn">San Juan</button>
+    <button id="denver" class="denver btn">Denver</button>
+    <button id="miami" class="miami btn">Miami</button>
+    <button id="new-york" class="new-york btn">New York</button>
+    <button id="seattle" class="seattle btn">Seattle</button>
+  </div>
+</div>
+      <div class="data-input-card">
+        <p class="data-input" id="city"></p>
+        <p class="data-input" id="temp"></p>
+        <p class="data-input" id="highs"></p>
+        <p class="data-input" id="lows"></p>
+        <p class="data-input" id="humidity"></p>
+        <p class="data-input" id="feels-like"></p>
+        <p class="data-input" id="wind-speed"></p>
+        <p class="data-input" id="conditions"></p>
+        <!-- <p id="icon"></p> -->
       </div>
     </div> 
+  <footer class="footer">Thanks For Coming 😺</footer>
     
     
     <script type="text/javascript" src="develop/js/script.js"></script>
