@@ -9,6 +9,7 @@ var feelsLike = document.getElementById("feels-like")
 var windSpeed = document.getElementById("wind-speed")
 var conditions = document.getElementById("conditions")
 var submitBtn = document.querySelector('#submit-button');
+var icon = document.getElementById("#icon")
 //function to hold the fetch and data handling.
 function getApi() {
    var userInput = document.querySelector('#submit').value;//the value of the user's input. 
@@ -37,6 +38,8 @@ function getApi() {
          console.log(windSpeed);
          conditions.textContent = data.weather[0].description;
          console.log(conditions);
+         // icon.textContent = data.weather[0].icon;
+         // console.log(icon);I REALLY THOUGHT THIS WOULD WORK. 
          //really wanted to add Icons here with the current conditions. 
          console.log(userInput);
       });

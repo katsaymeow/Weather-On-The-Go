@@ -3,10 +3,12 @@
     --text-color: #08065b;
     --accent-color: #77b767;
     --box-color: #90e77a;
+
 }
 body {
     font-family: 'Libre Baskerville', serif;
     background-color: var(--background-color);
+    min-height: calc(100vh - 240px - 60px);
 }
 .jumbotron{
     color: var(--text-color);
@@ -50,8 +52,9 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding-top: 3rem;
     color: var(--text-color);
     background-color: var(--accent-color);
-    height: 60px;
+    height: 125px;
     width: 100%;
 }
